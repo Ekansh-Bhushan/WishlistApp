@@ -45,7 +45,6 @@ fun AppBarView(
             )
         },
         modifier = Modifier
-            .padding(start = 4.dp)
             .heightIn(max = 54.dp),
         elevation = 3.dp,
         backgroundColor = colorResource(id = R.color.app_bar_color),
