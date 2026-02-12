@@ -24,7 +24,7 @@ fun AppBarView(
 ){
 
     val navigationIcon : (@Composable () -> Unit) ?= {
-        IconButton(onClick = { onBackNavClick }) {
+        IconButton(onClick = { onBackNavClick() }) {
             Icon(
                 imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                 tint = Color.White,

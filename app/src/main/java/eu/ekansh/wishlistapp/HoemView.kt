@@ -13,9 +13,13 @@ import androidx.compose.ui.platform.LocalContext
 fun HomeView(){
     val context = LocalContext.current
     Scaffold (
-        topBar = { AppBarView(title = "Wishlist", {
-            Toast.makeText(context,"Button CLicked",Toast.LENGTH_LONG).show()
-        }) }
+        topBar = {AppBarView(
+            title = "Wishlist",
+            onBackNavClick = {
+                Toast.makeText(context, "Button Clicked", Toast.LENGTH_LONG).show()
+            }
+        )
+        }
     ){
         LazyColumn(modifier = Modifier.fillMaxSize().padding(it)){
 
