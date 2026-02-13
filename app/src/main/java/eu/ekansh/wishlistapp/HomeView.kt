@@ -22,11 +22,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import eu.ekansh.wishlistapp.data.DummyWish
 import eu.ekansh.wishlistapp.data.Wish
 
 @Composable
-fun HomeView(){
+fun HomeView(
+    navController: NavController,
+    viewModel: WishViewModel
+){
     val context = LocalContext.current
     Scaffold (
         containerColor = Color.White,
@@ -43,7 +47,10 @@ fun HomeView(){
                 modifier = Modifier.padding(all = 20.dp),
                 contentColor = Color.White,
                 containerColor = Color.Blue,
-                onClick = { /*TODO*/ }) {
+                onClick = {
+
+                    navController.navigate(Screen.AddScreen.route)
+                }) {
                     Icon(imageVector = Icons.Default.Add, contentDescription = null)
             }
         }

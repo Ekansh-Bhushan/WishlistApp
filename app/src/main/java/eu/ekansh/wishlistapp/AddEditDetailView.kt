@@ -33,9 +33,10 @@ fun AddEditDetailView(
     navController: NavController
 ) {
     Scaffold(
-        
+        containerColor = Color.White,
         topBar = { AppBarView(title =
-            if(id != 0L) stringResource(id = R.string.update_wish) else stringResource(id = R.string.add_wish))
+            if(id != 0L) stringResource(id = R.string.update_wish) else stringResource(id = R.string.add_wish)
+        ) { navController.navigateUp() }
         }
     ) {
         Column(
