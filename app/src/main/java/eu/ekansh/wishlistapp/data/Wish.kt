@@ -1,8 +1,16 @@
 package eu.ekansh.wishlistapp.data
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "wish_table")
 data class Wish(
+    @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
+    @ColumnInfo("wish_title")
     val title : String = "",
+    @ColumnInfo("wish_description")
     val description : String = ""
 )
 
