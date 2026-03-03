@@ -143,6 +143,7 @@ fun WishTextField(
         onValueChange = onValueChanged,
         label = { Text(text = label, color = Color.Black)},
         modifier = Modifier.fillMaxWidth(),
+        textStyle = TextStyle(color = Color.Black),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
         colors = TextFieldDefaults.outlinedTextFieldColors(
             focusedBorderColor = colorResource(id = R.color.black),
