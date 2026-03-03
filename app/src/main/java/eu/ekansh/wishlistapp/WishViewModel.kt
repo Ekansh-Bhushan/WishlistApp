@@ -39,7 +39,6 @@ class WishViewModel(
 
         }
     }
-
     fun addWish(wish: Wish) {
         viewModelScope.launch(Dispatchers.IO) {
             wishRepository.addAWish(wish)
